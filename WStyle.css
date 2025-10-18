@@ -1,0 +1,177 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+
+header{
+    margin: 0;
+    display: flex;
+    width:100%;
+    flex-direction:column ;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+#TitleBar{
+    margin: 0;
+    display: flex;
+    position: sticky;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    border-width: 0.5rem;
+    padding-bottom: 3rem;
+    border-color: #2e4528;
+    z-index: 999;
+
+    background-image: url(images/bg.jpg);
+}
+
+  #TitleBar img {
+
+    
+    width: 9.3rem;
+    height: auto;
+   
+    transform: translateY(2rem);
+
+  }
+
+  #TitleBar h1{
+    margin: 0;
+    font-size: 6rem;
+    
+    color:  #2e4528;}
+
+  .brown{
+    color:#4c301b;}
+
+    #OptionBar{
+        margin: 0;
+        padding: 0%;
+        display: flex;
+        z-index: 999;
+        position: sticky;
+        background-image: url(images/parchment.png);
+    }
+
+    #OptionBar *{
+        color:#2e4528;
+        font-weight:bold;
+        font-size:1rem;
+        text-decoration: none; 
+
+    }
+    #PathBar{
+        margin: 0;
+        padding: 0%;
+        display: flex;
+        z-index: 999;
+        position: sticky;
+        font-weight: bold;
+        justify-content: center;
+        background-image: url(images/light\ parchment.png);
+    }
+
+    #content{
+        padding-top: 22rem;
+        padding-bottom: 4.5rem;
+
+    } 
+/*----------------------------------------------------------------------------------------------*/
+
+#header1{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    margin: 0.6rem 4rem;
+
+
+}
+
+label {
+
+    color:#4c301b;
+    font-size: 2rem;
+    margin-right: 10px;
+  }
+  
+  select {
+
+    font-size: 1.8rem;
+
+    border-radius: 0.2;
+    border: 1px solid #b8a589;
+    background-color: #fdfaf4;
+    flex-shrink: 0;
+    color:#2e4528;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  select:hover {
+    border-color: #4c301b;
+  }
+  .sectionHeader{
+
+    font-size: 3rem;
+
+    color:#4c301b;
+
+}
+/*----------------------------------------------------------------------------------------------*/
+.workshops{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin-left: 4.5rem;
+margin-right: 4rem;
+gap: 10rem;
+
+}
+.workshops img{
+    width: 22rem;
+}
+.w1{
+    width: 22rem;
+    height: 35rem;
+    display: flex;
+    flex-direction: column ;
+    border-width: 0.1rem;
+    border-style: outset;
+    flex-grow: 0;
+    flex-shrink: 0;
+    overflow-wrap: break-word;
+    margin-bottom: 3rem;
+    
+}
+.w1 h3{
+    font-size: 1.3rem;
+}
+.w1 p{
+    font-size: 1.1rem;
+   
+}
+  
+/*----------------------------------------------------------------------------------------------*/
+footer{ 
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/parchment.png);
+    
+}
+
+footer *{
+    margin-top: 0.25rem;
+}
+a{color:#2e4528;}
+
