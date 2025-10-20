@@ -478,6 +478,13 @@ header{
      #form{
         margin-left: 20rem;
      }
+     #FormHeader{
+
+      font-size: 3rem;
+       
+        color:#4c301b;
+      
+     }
      
       #joinForm {
         background-image: url(images/parchment.png);
