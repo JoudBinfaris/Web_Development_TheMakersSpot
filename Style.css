@@ -633,7 +633,44 @@ header{
 .flex-dropdown:focus-within .menu-content {
   display: flex;
 }
-
+ .w2{
+        width: 22rem;
+        display: flex;
+        flex-direction: column ;
+        border-width: 0.1rem;
+        border-style: outset;
+        flex-grow: 0;
+        flex-shrink: 0;
+        overflow-wrap: break-word;
+        margin-bottom: 3rem;
+        padding: auto;
+        
+    }
+    .w2 h3{
+        font-size: 1.3rem;
+    }
+    .w2 p{
+        font-size: 1.1rem;
+       
+    }
+.status{
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+}
+.status.pending{
+  background-color: #fff3cd;
+  color: #856404;
+}
+.status.Completed{
+  background-color: #d4edda;
+  color: #155724;
+}
+.status.declined{
+  background-color: #f8d7da;
+  color: #721c24;
+}
 
 
 
