@@ -675,7 +675,7 @@ header{
 #welcome-user{
   position: relative;
   bottom:10rem;
-  margin-top: 0.3rem;
+  margin-top: 0.01rem;
   margin-left: 25rem;
   font-size: 3.2rem;
   color:#2e4528;
@@ -764,7 +764,10 @@ header{
   color: #4c301b;
   font-size: 1rem;
 }
+#shrink{
+   margin-top: 15rem; /* bring content up */
 
+}
 
 
       
