@@ -185,11 +185,15 @@ header{
     #reviews{
         display: flex;
         justify-content: flex-start;
-        gap: 1rem;
+        gap: 2rem;
         margin-top: 1.8rem;
         margin-left: 2rem;
         margin-right: 2rem;
         margin-bottom: 2rem;
+        padding-top:1.8rem ;
+        padding-bottom:1.8rem ;
+        padding-left: 1.4rem;
+        padding-right: 1.4rem;
         overflow: scroll;
         flex: 0 0 10rem;
 
@@ -201,9 +205,14 @@ header{
         background-image: url(images/parchment.png);
         width: 25rem;    
         height: 13rem;    
-        box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1); 
+        box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.3); 
 
 }
+
+.r1:hover{
+  transform: scale(1.05);
+}
+
 
     .box{
         display: flex;
@@ -267,11 +276,15 @@ header{
      #FAQs{
         display: flex;
         justify-content: flex-start;
-        gap: 1rem;
+        gap: 2rem;
         margin-top: 1.8rem;
         margin-left: 2rem;
         margin-right: 2rem;
         margin-bottom: 2rem;
+        padding-top:1.8rem ;
+        padding-bottom:1.8rem ;
+        padding-left: 1.4rem;
+        padding-right: 1.4rem;
         overflow: scroll;
         flex: 0 0 10rem;
 
@@ -296,11 +309,17 @@ header{
         flex-shrink: 0;   
         width: 25rem;          
         height: 20rem;
-        box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1); 
+        box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.3); 
         margin: 0.625rem auto;     
         background-image: url(images/parchment.png);
            
 
+     }
+
+     .q1:hover{
+      
+        transform: scale(1.05);
+      
      }
 
      #FAQs p{
