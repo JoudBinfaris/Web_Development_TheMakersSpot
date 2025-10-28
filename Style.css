@@ -633,6 +633,7 @@ header{
 .flex-dropdown:focus-within .menu-content {
   display: flex;
 }
+
  .w2{
         width: 22rem;
         display: flex;
@@ -671,6 +672,7 @@ header{
   background-color: #f8d7da;
   color: #721c24;
 }
+
 
 
 
