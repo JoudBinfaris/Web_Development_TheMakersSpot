@@ -185,11 +185,15 @@ header{
     #reviews{
         display: flex;
         justify-content: flex-start;
-        gap: 1rem;
+        gap: 2rem;
         margin-top: 1.8rem;
         margin-left: 2rem;
         margin-right: 2rem;
         margin-bottom: 2rem;
+        padding-top:1.8rem ;
+        padding-bottom:1.8rem ;
+        padding-left: 1.4rem;
+        padding-right: 1.4rem;
         overflow: scroll;
         flex: 0 0 10rem;
 
@@ -201,9 +205,14 @@ header{
         background-image: url(images/parchment.png);
         width: 25rem;    
         height: 13rem;    
-        box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1); 
+        box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.3); 
 
 }
+
+.r1:hover{
+  transform: scale(1.05);
+}
+
 
     .box{
         display: flex;
@@ -267,11 +276,15 @@ header{
      #FAQs{
         display: flex;
         justify-content: flex-start;
-        gap: 1rem;
+        gap: 2rem;
         margin-top: 1.8rem;
         margin-left: 2rem;
         margin-right: 2rem;
         margin-bottom: 2rem;
+        padding-top:1.8rem ;
+        padding-bottom:1.8rem ;
+        padding-left: 1.4rem;
+        padding-right: 1.4rem;
         overflow: scroll;
         flex: 0 0 10rem;
 
@@ -296,11 +309,17 @@ header{
         flex-shrink: 0;   
         width: 25rem;          
         height: 20rem;
-        box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1); 
+        box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.3); 
         margin: 0.625rem auto;     
         background-image: url(images/parchment.png);
            
 
+     }
+
+     .q1:hover{
+      
+        transform: scale(1.05);
+      
      }
 
      #FAQs p{
@@ -830,11 +849,147 @@ header{
 
 
 
+/* Titles */
+.ms-subtitle {
+  margin: 0 0 14px;
+  color: #2e4528;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+/* Staff List (Delete Section) */
+.ms-staff-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  transform: scale(1.4);   /* يضاعف الحجم فعليًا */
+  cursor: pointer;
+}
+
+.ms-staff-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fffdf9;
+  border: 1px solid #e5d8c8;
+  border-radius: 10px;
+  padding: 10px 14px;
+  min-height: 70px;
+}
+
+.ms-staff-item img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #d8c7b5;
+}
+
+.ms-staff-item span {
+  flex-grow: 1;
+  color: #4c301b;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.ms-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+/* Buttons */
+.ms-btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ms-primary {
+  background: #4c301b;
+  color: #fff;
+}
+
+.ms-primary:hover {
+  background: #2e4528;
+}
+
+.ms-danger {
+  background: #a2433b;
+  color: #fff;
+}
+
+.ms-danger:hover {
+  filter: brightness(0.95);
+}
+
+/* Add Staff Form Grid */
+.ms-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 28px;
+  align-items: start;
+}
+
+.ms-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ms-full {
+  grid-column: 1 / -1;
+}
+
+/* Labels and Inputs */
+.ms-form label {
+  color: #2e4528;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.ms-star {
+  color: #2e4528;
+  font-weight: 700;
+}
+
+.ms-form input,
+.ms-form textarea,
+.ms-form select {
+  padding: 10px 12px;
+  border: 1px solid #d8c7b5;
+  border-radius: 8px;
+  font-size: 1rem;
+  height: 44px;
+  box-sizing: border-box;
+}
+
+/* File input alignment */
+#msPhoto {
+  padding: 6px;
+  background: #fff;
+}
 
 
+  #content {
+    padding-top: 200px;
+    padding-bottom: 120px;
+  }
 
+#Deletestaff{  /*عشان ابعد ال delete staff*/
+    margin-top: 200px;
+}
+/* لحذف الدروب داون */
+.dropdown, .dropbtn, .droppages { display: none !important; }
 
-    
 
     /*----------------------------------------------------------------------------------------------*/
     footer{ 
