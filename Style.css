@@ -785,19 +785,376 @@ header{
 }
 #shrink{
    margin-top: 15rem; /* bring content up */
+}
+
+/***********************************************
+ * Craft Manager Pages
+ * Add Workshop (#aw-)
+ * Manage Staff (#ms-)
+ ***********************************************/
+
+ #cm-PathBar {
+  display: flex;
+  margin: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  z-index: 10;
+  position: relative;
+  font-weight: bold;
+  justify-content: center;
+  background-image: url(images/light\ parchment.png);
+}
+
+.cm-path {
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  color: #2e4528; 
+  text-decoration: none;
+}
+.cm-path:hover {
+  text-decoration: underline;
+}
+.cm-current {
+  color: #4c301b;
+  pointer-events: none;
+  cursor: default;
+}     
+/* ========== Craft Manager ========== */
+.workshops {
+  padding: 40px 40px 60px;
+  text-align: center;
+  background-color: #fffdf9;
+  
+}
+
+.workshops h2 {
+  font-size: 36px;
+  margin: 0 0 20px;
+  color: #3e2c18;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.workshops-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.workshop-desc {
+  border: 1px solid #d8c7b5;
+  width: 240px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fffdf9;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.workshop-desc:hover {
+  transform: translateY(-5px);
+}
+
+.workshop-img {
+
+  margin-bottom: 20px;
+}
+
+.workshop-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.workshop-desc h3 {
+  font-size: 18px;
+  color: #5a4634;
+  margin-bottom: 8px;
+}
+
+.workshop-desc p {
+  font-size: 14px;
+  color: #6d5c4b;
+  margin: 4px 0;
+}
+
+/* Flexbox used to align the two links side by side */
+#craft-dashboard-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 60px;
+  padding: 20px 0;
+}
+
+.craft-dashboard-link {
+  display: block;
+  width: 280px;
+  text-decoration: none;
+  background: #fffdf9;
+  border: 1px solid #d8c7b5;
+  border-radius: 12px;
+  padding: 18px 20px;
+  color: #4c301b;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.craft-dashboard-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+#craft-dashboard h2 {
+  color: #2e4528;    
+  font-size: 2rem;
+  margin-bottom: 10px;
+}  
+/* ========== add workshop ========== */
+#aw-main {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 0 16px;
+  font-family: Arial, sans-serif;
+}
+
+#aw-heading {
+  text-align: center;
+  margin-bottom: 32px;
+  color: #214d2e;
+}
+
+#aw-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #f7f4ee;
+  padding: 20px;
+  border: 1px solid #dcd2bf;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  margin-top: 100px;
+}
+
+#aw-form label {
+  font-weight: bold;
+  color: #214d2e;
+}
+
+#aw-form input,
+#aw-form textarea,
+#aw-form button {
+  padding: 10px;
+  border: 1px solid #dcd2bf;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#aw-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+#aw-submit-btn {
+  background: #214d2e;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#aw-submit-btn:hover {
+  background: #173c22;
+}
+
+#aw-desc-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #214d2e;
+  font-size: 16px;
+}
+
+#aw-panel {
+  background: #f7f4ee;
+  border: 1px solid #dcd2bf;
+  border-radius: 12px;
+  padding: 26px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  max-width: 800px;
+  margin: 20px auto;
+   margin-top: 200px;
+   margin-bottom: 100px;
+}
+
+#aw-submit-row {
+  display: flex;
+  justify-content: flex-end;
+}
+/* ========== manage staff ========== */
+#content {
+  max-width: 950px;;
+  margin: 0 auto;
+  padding-top: 250px;
+  padding-bottom: 140px;
 
 }
 
+/* Forms */
+.ms-form {
+  background: #f7f4ee;
+  border: 1px solid #dcd2bf;
+  border-radius: 12px;
+  padding: 20px 26px;
+  margin: 22px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
 
-      
-  
+
+/* Titles */
+.ms-subtitle {
+  margin: 0 0 14px;
+  color: #2e4528;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+/* Staff List (Delete Section) */
+.ms-staff-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  transform: scale(1.4);   /* يضاعف الحجم فعليًا */
+  cursor: pointer;
+}
+
+.ms-staff-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fffdf9;
+  border: 1px solid #e5d8c8;
+  border-radius: 10px;
+  padding: 10px 14px;
+  min-height: 70px;
+}
+
+.ms-staff-item img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #d8c7b5;
+}
+
+.ms-staff-item span {
+  flex-grow: 1;
+  color: #4c301b;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.ms-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+/* Buttons */
+.ms-btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ms-primary {
+  background: #4c301b;
+  color: #fff;
+}
+
+.ms-primary:hover {
+  background: #2e4528;
+}
+
+.ms-danger {
+  background: #a2433b;
+  color: #fff;
+}
+
+.ms-danger:hover {
+  filter: brightness(0.95);
+}
+
+/* Add Staff Form Grid */
+.ms-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 28px;
+  align-items: start;
+}
+
+.ms-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ms-full {
+  grid-column: 1 / -1;
+}
+
+/* Labels and Inputs */
+.ms-form label {
+  color: #2e4528;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.ms-star {
+  color: #2e4528;
+  font-weight: 700;
+}
+
+.ms-form input,
+.ms-form textarea,
+.ms-form select {
+  padding: 10px 12px;
+  border: 1px solid #d8c7b5;
+  border-radius: 8px;
+  font-size: 1rem;
+  height: 44px;
+  box-sizing: border-box;
+}
+
+/* File input alignment */
+#msPhoto {
+  padding: 6px;
+  background: #fff;
+}
 
 
+  #content {
+    padding-top: 200px;
+    padding-bottom: 120px;
+  }
 
+#Deletestaff{  /*عشان ابعد ال delete staff*/
+    margin-top: 200px;
+}
+/* لحذف الدروب داون */
+.dropdown, .dropbtn, .droppages { display: none !important; }
 
-
-
-    
 
     /*----------------------------------------------------------------------------------------------*/
     footer{ 
