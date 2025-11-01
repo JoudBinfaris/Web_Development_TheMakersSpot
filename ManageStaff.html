@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Makers Spot</title>
+<meta charset="utf-8">
+<style>
+    @import url(Style.css);
+</style>
+</head>
+<body>
+     <header>
+        
+            <div id="TitleBar">
+            <h1 id="TitleSubject">The Makers <span id=brown>Spot</span> <img id=logo src="images/tms.png"></h1>
+            </div>
+
+            <div id="OptionBar">
+                <pre>  <a href=Home.html>Home</a>   <a href=MySpot.HTML>My Spot</a>   <a href=Workshops.html>Workshops</a>    <a href=AboutUs.html>About Us</a>    <a href="CraftManager.html">Craft Manager</a> </pre>
+            </div>
+
+            <div id="cm-PathBar">
+  <a class="cm-path" href="Home.html">Home</a> >
+  <a class="cm-path" href="CraftManager.html">Craft Manager</a> >
+  <span class="cm-path cm-current">Manage Staff</span>
+</div>
+
+     </header>
+<div id="mscontent">
+<!-- ===== Section 1: Delete Staff ===== -->
+    <form  id="Deletestaff" class="ms-form" method="post">
+      <h3 class="ms-subtitle">Manage Staff Members</h3>
+
+      <div class="ms-staff-list">
+        <label class="ms-staff-item">
+          <img src="images/StaffMembericon.png" alt="Employee">
+          <span>Employee Name</span>
+          <input type="checkbox" name="delete[]" value="emp1">
+        </label>
+
+        <label class="ms-staff-item">
+          <img src="images/StaffMembericon.png" alt="Employee">
+          <span>Employee Name</span>
+          <input type="checkbox" name="delete[]" value="emp2">
+        </label>
+
+        <label class="ms-staff-item">
+          <img src="images/StaffMembericon.png" alt="Employee">
+          <span>Employee Name</span>
+          <input type="checkbox" name="delete[]" value="emp3">
+        </label>
+      </div>
+
+      <div class="ms-actions">
+        <button type="submit" class="ms-btn ms-danger">Delete</button>
+      </div>
+    </form>
+
+    <!-- ===== Section 2: Add Staff ===== -->
+    <form  id="Addstaff" class="ms-form" method="post">
+      <h3 class="ms-subtitle">Add New Staff Member</h3>
+
+      <div class="ms-grid">
+        <div class="ms-group">
+          <label for="msName">Name <span class="ms-star">*</span></label>
+          <input id="msName" type="text" required>
+        </div>
+
+        <div class="ms-group">
+          <label for="msPhoto">Photo <span class="ms-star">*</span></label>
+          <input id="msPhoto" type="file" accept="image/*" required>
+        </div>
+
+        <div class="ms-group">
+          <label for="msEmail">Email <span class="ms-star">*</span></label>
+          <input id="msEmail" type="email" required>
+        </div>
+
+        <div class="ms-group">
+          <label for="msExpertise">Expertise <span class="ms-star">*</span></label>
+          <input id="msExpertise" type="text" required>
+        </div>
+
+        <div class="ms-group">
+          <label for="msDob">Date of Birth <span class="ms-star">*</span></label>
+          <input id="msDob" type="date" required>
+        </div>
+
+        <div class="ms-group">
+          <label for="msSkills">Skills <span class="ms-star">*</span></label>
+          <input id="msSkills" type="text" required>
+        </div>
+
+        <div class="ms-group ms-full">
+          <label for="msEducation">Education <span class="ms-star">*</span></label>
+          <input id="msEducation" type="text" required>
+        </div>
+      </div>
+
+      <div class="ms-actions ms-full">
+        <button type="submit" class="ms-btn ms-primary">Add</button>
+      </div>
+    </form>  
+  </div>
+
+     <footer>
+        <a href="mailto:info@TheMakersSpot.com">info@TheMakersSpot.com</a>
+        <p>All Rights Reserved To JAN.CO &copy;</p>
+      </footer>
+
+
+</body>
+</html>

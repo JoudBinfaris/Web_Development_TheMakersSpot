@@ -4,7 +4,7 @@
 <title>The Makers Spot</title>
 <meta charset="utf-8">
 <style>
-    @import url(WStyle.css);
+    @import url(Style.css);
 </style>
 </head>
 <body>
@@ -18,11 +18,17 @@
         <nav>
 
             <div id="OptionBar">
-                <pre>  <a href=Home.html>Home</a>   <a href=MySpot.HTML>My Spot</a>   <a href=Workshops.html>Workshops</a>    <a href=AboutUs.html>About Us</a>    <a href="CraftManager">Craft Manager</a> </pre>
+                  <a class="option" href=Home.html>Home</a>    <div class="flex-dropdown">
+        <button class="menu-btn">My Spot</button>
+        <div class="menu-content">
+            <a href="PreviousWorkshops.html">Previous Workshops</a>
+            <a href="WorkshopsRequest.html">Request Workshops</a>
+            </div>
+        </div>      <a class="option" href=Workshops.html>Workshops</a>    <a class="option" href=AboutUs.html>About Us</a>    <a class="option" href="CraftManager.html">Craft Manager</a> 
             </div>
 
             <div id="PathBar">
-                <pre>  <a href=Home.html>Home</a>  >   <a href=Workshops.html>Workshops</a></pre>
+                 <a class="path" href=Home.html>Home</a>  >   <a class="path" href=Workshops.html>Workshops</a>
             </div>
         </nav>
 
@@ -36,11 +42,17 @@
         <div id="header1">
         <h2 class="sectionHeader" >Available Workshops</h2>
         <div class="sort">
-        <label for="sort" style="font-weight: bold;">Sort By</label>
-        <select id="sort" name="sort">
-        <option value="price">Price</option>
-        <option value="name">Name</option>
-        </select>
+            <label id=sortby for="sort">Sort By:</label>
+            <select id="sort" name="sort">
+              <optgroup label="Price">
+                <option value="low-high">Low to High</option>
+                <option value="high-low">High to Low</option>
+              </optgroup>
+              <optgroup label="Name">
+                <option value="a-z">A - Z</option>
+                <option value="z-a">Z - A</option>
+              </optgroup>
+            </select>
     </div>
     </div>
 

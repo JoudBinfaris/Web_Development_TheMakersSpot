@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Makers Spot</title>
+<meta charset="utf-8">
+<style>
+    @import url(Style.css);
+</style>
+</head>
+<body>
+
+
+     <header>
+        
+        <div id="TitleBar">
+            <h1 id="TitleSubject">The Makers <span class=brown>Spot</span> <img id=logo src="images/tms.png" alt=""></h1>
+            </div>
+        <nav>
+
+            <div id="OptionBar">
+                  <a class="option" href=Home.html>Home</a>    
+
+
+    <div class="flex-dropdown">
+        <button class="menu-btn">My Spot</button>
+        <div class="menu-content">
+            <a href="PreviousWorkshops.html">Previous Workshops</a>
+            <a href="WorkshopsRequest.html">Request Workshops</a>
+            </div>
+        </div>   
+        
+        <a class="option" href=Workshops.html>Workshops</a>    <a class="option" href=AboutUs.html>About Us</a>    <a class="option" href="CraftManager.html">Craft Manager</a> 
+            </div>
+
+
+            <div id="PathBar">
+                <a class="path" href=Home.html>Home</a>  >   <a class="path" href=WorkshopsRequest.html>My Spot - Workshop Request</a>
+
+            </div>
+        </nav>
+
+     </header>
+
+
+
+     <div id="content">
+      <img src="images/profile.png" alt="prfilepic" id="userpic">
+      <div class="main">
+  
+    <h2 id="h2h2" class="sectionHeader">Request Workshops</h2>
+    <div class="panel">
+    <form action="#" method="post" class="form-han">
+ <h3 id="h3Request">Choose a Workshop:</h3>
+        <div id="dropdownRequest">
+            <select name="workshop" id="workshop2">
+                <option value="woodwork">Woodwork</option>
+                <option value="pottery">Pottery</option>
+                <option value="painting">Painting</option>
+            </select>
+        </div>
+               
+                <label for="name"> Maker's First Name:</label>
+                <input type="text" class="name" name="name" required><br><br>
+                <label for="name"> Maker's Last Name:</label>
+                <input type="text" class="name" name="name" required><br><br>
+                
+                <label for="email">Maker's Email:</label>
+                <input type="email" class="email" name="email" required><br><br>
+                
+                <label for="date">Date of The Workshop:</label>
+                <input type="date" class="date" name="date" required><br><br>
+                
+                <label for="comments">Description:</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+                
+                <input type="submit" value="Submit Request">
+            </form>
+  </div>
+</div>
+     </div>
+ 
+   
+     <footer>
+        <a href="mailto:info@TheMakersSpot.com">info@TheMakersSpot.com</a>
+        <p>All Rights Reserved To JAN.CO &copy;</p>
+      </footer>
+
+
+</body>
+</html>

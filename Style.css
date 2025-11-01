@@ -27,7 +27,7 @@ header{
     align-items: center;
     justify-content: center;
     border-width: 0.5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
     border-color: #2e4528;
     z-index: 999;
 
@@ -54,12 +54,26 @@ header{
     color:#4c301b;}
 
     #OptionBar{
-        margin: 0;
-        padding: 0%;
         display: flex;
-        z-index: 999;
+        padding-top: 0.5rem ;
+        padding-bottom: 0.5rem ;
+        margin: 0;
+        display: flex;
         position: sticky;
         background-image: url(images/parchment.png);
+        z-index: 2000;
+        overflow: visible; 
+    }
+
+    .option{
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+
+    }
+
+    #OptionBar a{
+        font-size: 1.3rem;      
     }
 
     #OptionBar *{
@@ -69,13 +83,33 @@ header{
         text-decoration: none; 
 
     }
-    /*----------------------------------------------------------------------------------------------*/
+    #PathBar{
+        display: flex;
+        margin: 0;
+        padding-top: 0.5rem ;
+        padding-bottom: 0.5rem ;
+        display: flex;
+        z-index: 999;
+        position: sticky;
+        font-weight: bold;
+        justify-content: center;
+        background-image: url(images/light\ parchment.png);
+    }
+
+    .path{
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+
+    }
 
     #content{
-        padding-top: 20rem;
-        padding-bottom: 4.5rem;
+        margin-top: 20rem;
+        margin-bottom: 4.5rem;
 
     } 
+    /*----------------------------------------------------------------------------------------------*/
+
+
 
 
 
@@ -100,7 +134,6 @@ header{
         flex: 1.5;
          display: flex;
         justify-content: space-around;
-        align-items: flex-start;
          gap: 2rem;
      }
 
@@ -152,11 +185,15 @@ header{
     #reviews{
         display: flex;
         justify-content: flex-start;
-        gap: 1rem;
+        gap: 2rem;
         margin-top: 1.8rem;
         margin-left: 2rem;
         margin-right: 2rem;
         margin-bottom: 2rem;
+        padding-top:1.8rem ;
+        padding-bottom:1.8rem ;
+        padding-left: 1.4rem;
+        padding-right: 1.4rem;
         overflow: scroll;
         flex: 0 0 10rem;
 
@@ -168,9 +205,14 @@ header{
         background-image: url(images/parchment.png);
         width: 25rem;    
         height: 13rem;    
-        box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1); 
+        box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.3); 
 
 }
+
+.r1:hover{
+  transform: scale(1.05);
+}
+
 
     .box{
         display: flex;
@@ -234,11 +276,15 @@ header{
      #FAQs{
         display: flex;
         justify-content: flex-start;
-        gap: 1rem;
+        gap: 2rem;
         margin-top: 1.8rem;
         margin-left: 2rem;
         margin-right: 2rem;
         margin-bottom: 2rem;
+        padding-top:1.8rem ;
+        padding-bottom:1.8rem ;
+        padding-left: 1.4rem;
+        padding-right: 1.4rem;
         overflow: scroll;
         flex: 0 0 10rem;
 
@@ -263,11 +309,17 @@ header{
         flex-shrink: 0;   
         width: 25rem;          
         height: 20rem;
-        box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1); 
+        box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.3); 
         margin: 0.625rem auto;     
         background-image: url(images/parchment.png);
            
 
+     }
+
+     .q1:hover{
+      
+        transform: scale(1.05);
+      
      }
 
      #FAQs p{
@@ -280,9 +332,897 @@ header{
 
     
    
-    
-    
+    /* *************************************************************************************************************************** home page done*/
 
+    #header1{
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        margin-right: 1rem;           
+
+    
+    
+    }
+    
+    label {
+    
+        color:#4c301b;
+        font-size: 3rem;
+        margin-right: 0.5rem;
+      }
+      
+      #sortby{
+        font-size:1.5rem;
+        font-weight: bold;
+    
+      }
+    
+      select {
+    
+        font-size: 1rem;
+        border-radius: 0.2;
+        border: 1px solid #b8a589;
+        background-color: #fdfaf4;
+        flex-shrink: 0;
+        color:#2e4528;
+        outline: none;
+        cursor: pointer;
+      }
+      
+      select:hover {
+        border-color: #4c301b;
+      }
+     
+    /*----------------------------------------------------------------------------------------------*/
+    .workshops{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 4.5rem;
+    margin-right: 4rem;
+    gap: 10rem;
+    
+    }
+    .workshops img{
+        width: 22rem;
+    }
+    .w1{
+        width: 22rem;
+        height: 35rem;
+        display: flex;
+        flex-direction: column ;
+        border-width: 0.1rem;
+        border-style: outset;
+        flex-grow: 0;
+        flex-shrink: 0;
+        overflow-wrap: break-word;
+        margin-bottom: 3rem;
+        
+    }
+    .w1 h3{
+        font-size: 1.3rem;
+    }
+    .w1 p{
+        font-size: 1.1rem;
+       
+    }
+     /* *************************************************************************************************************************** workshops page done*/
+
+     #employees{
+        display: flex;
+        justify-content: flex-start;
+        gap: 1rem;
+        margin-top: 1.8rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+        overflow: scroll;
+        flex: 0 0 10rem;
+     }
+
+     .e1{
+        display: flex;
+        padding-left: 1rem;
+        border-radius: 0.5rem;
+        flex-shrink: 0;
+        background-image: url(images/parchment.png);
+        width: 25rem;    
+        height: 10rem;    
+        box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1); 
+
+    }
+
+    .box {
+        display: flex;
+        align-items: center;   
+        gap: 1rem;             
+        height: 100%;        
+      }
+
+    .e1  h4{
+
+        font-size: 2rem;
+        color: #2e4528;
+        
+    }
+
+    .Eprofile{
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+
+
+    }
+     /*----------------------------------------------------------------------------------------------*/
+     #joinmsg{
+
+        display: flex;
+        align-items: center; 
+        flex-direction: column; 
+        line-height: 2.5rem; 
+        padding-left: 1rem;
+        border-radius: 0.5rem;
+        background-image: url(images/parchment.png);
+        width: 90rem;    
+        height: 20rem;    
+        box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1); 
+        margin-left: 2rem;
+        margin-right: 2rem; 
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 2rem;
+        color: #2e4528;
+        margin: 0 auto;          
+     }
+
+     .abtn{
+        padding: 0.5rem 1rem;
+        font-family: "Poppins", sans-serif;
+        border-radius: 0.3rem;
+        font-size: 1.5rem;
+        color: #faf6eb;
+        cursor: pointer;
+        background-color: #2e4528;
+        
+     }
+     form {
+        align-self:self-end;
+     }
+
+
+     .abtn:hover {
+        outline: none;
+        background-color: #263b22;
+      }
+      /* *************************************************************************************************************************** about us page done*/
+     #form{
+        margin-left: 20rem;
+     }
+     #FormHeader{
+
+      font-size: 3rem;
+       
+        color:#4c301b;
+      
+     }
+     
+      #joinForm {
+        background-image: url(images/parchment.png);
+        border-radius: 10px;
+        padding: 2rem;
+        max-width: 900px;
+        margin: 2rem auto;
+        font-family: "Poppins", sans-serif;
+      }
+      
+ 
+      
+      .team-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem 2rem;
+      }
+      
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .form-group label {
+        font-weight: 600;
+        font-size: 2rem;
+        color: #2e4528;
+        margin-bottom: 0.3rem;
+      }
+      
+      .form-group input,
+      .form-group textarea {
+        border: 1px solid #4c301b;
+        border-radius: 4px;
+        padding: 0.5rem;
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        background-color: #fff;
+      }
+      
+      .form-group input[type="file"] {
+        padding: 0.4rem;
+      }
+      
+      .form-group textarea {
+        height: 100px;
+        resize: none;
+      }
+      
+      .form-submit {
+        grid-column: 2; /* place submit button bottom right */
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+      
+      .btn-submit {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+        background-color: #2e4528;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        align-self:flex-end;
+      }
+      
+      .btn-submit:hover {
+        background-color: #263b22;
+      }
+      
+  
+      
+        .form-submit {
+          grid-column: 1/-1;
+          justify-content: center;
+          display: flex;
+          justify-content: flex-end;
+        }
+
+
+
+
+      .flex-dropdown{
+        position: relative;
+        display:inline-flex;
+        align-items: center;
+        z-index: 3000; 
+        
+      }
+      .menu-btn{
+      
+  font-size: 1.3em !important;
+  border: none;
+  outline: none;
+  color:#2e4528;
+  padding:0;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0; 
+  cursor: pointer;
+  font-weight: bolder !important;
+
+  cursor: pointer;
+  padding: 0.06rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      .menu-btn:hover .flex-dropdown:hover .menu-btn{
+       background-color: #e7dac0; 
+       color: #4c301b;
+       }
+      .menu-btn::after{
+        content: ' ▼';
+        font-size: 0.8rem;
+      }
+      .menu-content{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top:100%;
+        left: 0;
+        background-color: #fdfaf4;
+        box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.1);
+        border-radius: 0.3rem;
+        margin-top: 0.5rem;
+        margin-top: 0;
+         z-index: 3000; 
+        
+      }
+      .menu-content a{
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        font-size: 1.2rem !important;
+          color: #4c301b;
+  transition: background-color 0.2s ease;
+      }
+      .menu-content a:hover{
+         background-color: #f0e6d2; /* parchment hover */
+  color: #2e4528;
+      }
+      .flex-dropdown:hover .menu-content,
+.flex-dropdown:focus-within .menu-content {
+  display: flex;
+}
+
+ .w2{
+        width: 22rem;
+        display: flex;
+        flex-direction: column ;
+        border-width: 0.1rem;
+        border-style: outset;
+        flex-grow: 0;
+        flex-shrink: 0;
+        overflow-wrap: break-word;
+        margin-bottom: 3rem;
+        padding: auto;
+        
+    }
+    .w2 h3{
+        font-size: 1.3rem;
+    }
+    .w2 p{
+        font-size: 1.1rem;
+       
+    }
+.status{
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+}
+.status.pending{
+  background-color: #fff3cd;
+  color: #856404;
+}
+.status.Completed{
+  background-color: #d4edda;
+  color: #155724;
+}
+.status.declined{
+  background-color: #f8d7da;
+  color: #721c24;
+}
+#welcome-user{
+  position: relative;
+  bottom:10rem;
+  margin-top: 0.01rem;
+  margin-left: 25rem;
+  font-size: 3.2rem;
+  color:#2e4528;
+}
+
+/* ***********************************************************************************************
+   STAFF PROFILE PAGE STYLING
+   (For AboutUs - Staff Member Profile Pages)
+   *********************************************************************************************** */
+
+.staff-profile {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 5rem auto 10rem auto;
+  background-color: #fffdf8;
+  border: 3px solid #2e4528;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+.staff-profile th,
+.staff-profile td {
+  border: 2px solid #362315;
+  padding: 1rem;
+  vertical-align: top;
+  text-align: left;
+  color: #394e33;
+}
+
+.staff-profile th {
+  background-color: #384435;
+  color: #ffffff;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.staff-profile td {
+  background-color: #fdfaf4;
+  font-size: 1rem;
+}
+
+.staff-profile td strong {
+  color: #4c301b;
+  font-size: 1.1rem;
+}
+
+.staff-profile td ul {
+  margin: 0.3rem 0 0 1.3rem;
+  list-style-type: disc;
+}
+
+.staff-profile td ul ul {
+  list-style-type: circle;
+  margin-left: 1.3rem;
+}
+
+.staff-profile td li {
+  margin-bottom: 0.3rem;
+  line-height: 1.5;
+  color: #4c301b;
+}
+
+/* Profile Picture */
+.staff-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #2e4528;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Section Header */
+
+/* Table Row Styling */
+.staff-profile tr:nth-child(even) td {
+  background-color: #fbf8f1;
+}
+
+.staff-profile td[colspan="3"] {
+  text-align: center;
+  font-style: italic;
+  background-color: #f6efe2;
+  color: #4c301b;
+  font-size: 1rem;
+}
+#shrink{
+   margin-top: 15rem; 
+
+}
+/* ========== add workshop ========== */
+.main {
+  max-width: 600px;
+  margin-bottom: 100px;
+  padding: 0 16px;
+  font-family: Arial, sans-serif;
+}
+
+
+#h3Request{
+  font-size: 2em!important;
+  font-weight: bold !important;  
+  color: #214d2e!important;
+  }
+ #workshop2 {
+  position: relative;
+  bottom: 74px;
+  left: 320px;
+  border-width: 4px;
+  
+ font-size: 1.5em!important;
+  font-weight: bold !important;  
+  color: #4c301b!important;
+  }
+ .panel label { 
+  
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #214d2e;
+}
+
+.panel  input, textarea, button {
+
+ width: 100%;
+  padding: 10px;
+  border: 1px solid #dcd2bf;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.panel  textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.panel  button {
+   width: 400px;
+  background: #214d2e;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.panel  button:hover {
+  background: #173c22;
+}
+.form-han{
+ display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #f7f4ee;
+  padding: 60px;
+  border: 5px solid #dcd2bf;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  margin-top: 50px;
+}
+
+
+
+
+
+
+/***********************************************
+ * Craft Manager Pages
+ * Add Workshop (#aw-)
+ * Manage Staff (#ms-)
+ ***********************************************/
+
+ #cm-PathBar {
+  display: flex;
+  margin: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  z-index: 10;
+  position: relative;
+  font-weight: bold;
+  justify-content: center;
+  background-image: url(images/light\ parchment.png);
+}
+
+.cm-path {
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  color: #2e4528; 
+  text-decoration: none;
+}
+.cm-path:hover {
+  text-decoration: underline;
+}
+.cm-current {
+  color: #4c301b;
+  pointer-events: none;
+  cursor: default;
+}     
+/* ========== Craft Manager ========== */
+.cmworkshops {
+  padding: 40px 40px 60px;
+  text-align: center;
+  background-color: #fffdf9;
+  
+}
+
+.cmworkshops h2 {
+  font-size: 36px;
+  margin: 0 0 20px;
+  color: #3e2c18;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.workshops-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.workshop-desc {
+  border: 1px solid #d8c7b5;
+  width: 220px; 
+  padding: 12px; 
+  border-radius: 10px;
+  background: #fffdf9;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+
+.workshop-desc:hover {
+  transform: translateY(-5px);
+}
+
+.workshop-img {
+
+  margin-bottom: 20px;
+}
+
+.workshop-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.workshop-desc h3 {
+  font-size: 18px;
+  color: #5a4634;
+  margin-bottom: 8px;
+}
+
+.workshop-desc p {
+  font-size: 14px;
+  color: #6d5c4b;
+  margin: 4px 0;
+}
+
+/* Flexbox used to align the two links side by side */
+#craft-dashboard-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 60px;
+  padding: 20px 0;
+
+}
+
+.craft-dashboard-link {
+  display: block;
+  width: 280px;
+  text-decoration: none;
+  background: #fffdf9;
+  border: 1px solid #d8c7b5;
+  border-radius: 12px;
+  padding: 18px 20px;
+  color: #4c301b;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.craft-dashboard-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+#craft-dashboard h2 {
+  color: #2e4528;    
+  font-size: 2rem;
+  margin-bottom: 10px;
+}  
+/* ========== add workshop ========== */
+#aw-main {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 0 16px;
+  font-family: Arial, sans-serif;
+}
+
+#aw-heading {
+  text-align: center;
+  margin-bottom: 32px;
+  color: #214d2e;
+  font-size: 18px;
+}
+
+#aw-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #f7f4ee;
+  padding: 20px;
+  border: 1px solid #dcd2bf;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  margin-top: 100px;
+}
+
+#aw-form label {
+  font-weight: bold;
+  color: #214d2e;
+  font-size: 18px;
+
+}
+
+#aw-form input,
+#aw-form textarea,
+#aw-form button {
+  padding: 10px;
+  border: 1px solid #dcd2bf;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#aw-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+#aw-submit-btn {
+  background: #214d2e;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#aw-submit-btn:hover {
+  background: #173c22;
+}
+
+#aw-desc-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #214d2e;
+  font-size: 16px;
+}
+
+#aw-panel {
+  background: #f7f4ee;
+  border: 1px solid #dcd2bf;
+  border-radius: 12px;
+  padding: 26px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  max-width: 800px;
+  margin: 20px auto;
+   margin-top: 200px;
+   margin-bottom: 100px;
+}
+
+#aw-submit-row {
+  display: flex;
+  justify-content: flex-end;
+}
+/* ========== manage staff ========== */
+#mscontent{
+  max-width:950px;
+  margin:0 auto;
+  padding-top:200px;   
+  padding-bottom:120px;
+}
+
+/* Forms */
+.ms-form {
+  background: #f7f4ee;
+  border: 1px solid #dcd2bf;
+  border-radius: 12px;
+  padding: 20px 26px;
+  margin: 22px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+
+/* Titles */
+.ms-subtitle {
+  margin: 0 0 14px;
+  color: #2e4528;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+/* Staff List (Delete Section) */
+.ms-staff-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  transform: scale(1.4);   /* يضاعف الحجم فعليًا */
+  cursor: pointer;
+}
+
+.ms-staff-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fffdf9;
+  border: 1px solid #e5d8c8;
+  border-radius: 10px;
+  padding: 10px 14px;
+  min-height: 70px;
+}
+
+.ms-staff-item img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #d8c7b5;
+}
+
+.ms-staff-item span {
+  flex-grow: 1;
+  color: #4c301b;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.ms-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+/* Buttons */
+.ms-btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ms-primary {
+  background: #4c301b;
+  color: #fff;
+}
+
+.ms-primary:hover {
+  background: #2e4528;
+}
+
+.ms-danger {
+  background: #a2433b;
+  color: #fff;
+}
+
+.ms-danger:hover {
+  filter: brightness(0.95);
+}
+
+/* Add Staff Form Grid */
+.ms-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 28px;
+  align-items: start;
+}
+
+.ms-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ms-full {
+  grid-column: 1 / -1;
+}
+
+/* Labels and Inputs */
+.ms-form label {
+  color: #2e4528;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.ms-star {
+  color: #2e4528;
+  font-weight: 700;
+}
+
+.ms-form input,
+.ms-form textarea,
+.ms-form select {
+  padding: 10px 12px;
+  border: 1px solid #d8c7b5;
+  border-radius: 8px;
+  font-size: 1rem;
+  height: 44px;
+  box-sizing: border-box;
+}
+
+/* File input alignment */
+#msPhoto {
+  padding: 6px;
+  background: #fff;
+}
+
+#Deletestaff{  /*عشان ابعد ال delete staff*/
+    margin-top: 200px;
+}
     /*----------------------------------------------------------------------------------------------*/
     footer{ 
         display: flex;
@@ -296,11 +1236,12 @@ header{
         background-image: url(images/parchment.png);
         
     }
-
+    
     footer *{
         margin-top: 0.25rem;
     }
-  a{color:#2e4528;}
+    a{color:#2e4528;} /**
+    
 
 
 
