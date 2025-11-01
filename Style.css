@@ -701,25 +701,23 @@ header{
   color:#2e4528;
 }
 
-/* ***********************************************************************************************
-   STAFF PROFILE PAGE STYLING
-   (For AboutUs - Staff Member Profile Pages)
-   *********************************************************************************************** */
 
+
+/* ========== staff profile table ========== */
 .staff-profile {
-  border-collapse: collapse;
   width: 90%;
   margin: 5rem auto 10rem auto;
   background-color: #fffdf8;
   border: 3px solid #2e4528;
-  font-family: "Poppins", sans-serif;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
 }
 
 .staff-profile th,
 .staff-profile td {
-  border: 2px solid #362315;
   padding: 1rem;
+  border: 2px solid #362315;
   vertical-align: top;
   text-align: left;
   color: #394e33;
@@ -732,51 +730,45 @@ header{
   text-align: center;
   font-weight: bold;
 }
-
 .staff-profile td {
   background-color: #fdfaf4;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
+
+
 
 .staff-profile td strong {
   color: #4c301b;
   font-size: 1.1rem;
 }
-
 .staff-profile td ul {
-  margin: 0.3rem 0 0 1.3rem;
+  margin:0.3rem 0 0 1.3rem;
   list-style-type: disc;
 }
-
-.staff-profile td ul ul {
-  list-style-type: circle;
-  margin-left: 1.3rem;
+.staff-profile td ul ul{
+list-style-type: circle;
+margin-left: 1.3rem;
 }
 
-.staff-profile td li {
+.staff-profiletd li{
   margin-bottom: 0.3rem;
   line-height: 1.5;
   color: #4c301b;
 }
 
-/* Profile Picture */
-.staff-pic {
+
+.staff-pic{
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 3px solid #2e4528;
   object-fit: cover;
-  display: block;
+  border: 3px solid #2e4528;
+  display:block;
   margin: 0 auto;
 }
-
-/* Section Header */
-
-/* Table Row Styling */
-.staff-profile tr:nth-child(even) td {
-  background-color: #fbf8f1;
+.staff-profile tr:nth-child(even) {
+  background-color: #f6efe2;
 }
-
 .staff-profile td[colspan="3"] {
   text-align: center;
   font-style: italic;
@@ -785,8 +777,7 @@ header{
   font-size: 1rem;
 }
 #shrink{
-   margin-top: 15rem; 
-
+  margin-top: 15rem;
 }
 /* ========== add workshop ========== */
 .main {
