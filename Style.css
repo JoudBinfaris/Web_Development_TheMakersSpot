@@ -81,6 +81,7 @@ header{
         font-weight:bold;
         font-size:1rem;
         text-decoration: none; 
+        font-family: Georgia, "Times New Roman", serif;
 
     }
     #PathBar{
@@ -1012,7 +1013,7 @@ header{
   border: 1px solid #dcd2bf;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,.08);
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 #aw-form label {
@@ -1064,7 +1065,7 @@ header{
   box-shadow: 0 6px 18px rgba(0,0,0,.08);
   max-width: 800px;
   margin: 20px auto;
-   margin-top: 200px;
+   margin-top: 400px;
    margin-bottom: 100px;
 }
 
@@ -1109,7 +1110,7 @@ header{
 input[type="checkbox"] {
   width: 20px;
   height: 20px;
-  transform: scale(1.4);   /* يضاعف الحجم فعليًا */
+  transform: scale(1.4);   
   cursor: pointer;
 }
 
@@ -1139,13 +1140,13 @@ input[type="checkbox"] {
   margin-left: 10px;
 }
 
-.ms-actions {
+/*.ms-actions {
   display: flex;
   justify-content: flex-end;
   margin-top: 12px;
 }
 
-/* Buttons */
+
 .ms-btn {
   border: none;
   padding: 10px 20px;
@@ -1153,6 +1154,24 @@ input[type="checkbox"] {
   font-weight: 700;
   cursor: pointer;
   transition: 0.3s;
+}*/
+.ms-actions {
+  display: flex;
+  justify-content: flex-end; /* يبقى الزر على اليمين */
+  margin-top: 12px;
+}
+
+/* Buttons */
+.ms-btn {
+  border: none;
+  padding: 12px 50px;;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  width: auto;               
+  max-width: fit-content;    
+  display: inline-block;     
 }
 
 .ms-primary {
