@@ -796,10 +796,23 @@ header{
 }
 
 
-
+#h3Request{
+  font-size: 2em!important;
+  font-weight: bold !important;  
+  color: #214d2e!important;
+  }
+ #workshop2 {
+  position: relative;
+  bottom: 74px;
+  left: 320px;
+  border-width: 4px;
   
-
+ font-size: 1.5em!important;
+  font-weight: bold !important;  
+  color: #4c301b!important;
+  }
  .panel label { 
+  
   font-size: 1.7em;
   font-weight: bold;
   color: #214d2e;
@@ -847,6 +860,235 @@ header{
 
 
 
+
+/***********************************************
+ * Craft Manager Pages
+ * Add Workshop (#aw-)
+ * Manage Staff (#ms-)
+ ***********************************************/
+
+ #cm-PathBar {
+  display: flex;
+  margin: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  z-index: 10;
+  position: relative;
+  font-weight: bold;
+  justify-content: center;
+  background-image: url(images/light\ parchment.png);
+}
+
+.cm-path {
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  color: #2e4528; 
+  text-decoration: none;
+}
+.cm-path:hover {
+  text-decoration: underline;
+}
+.cm-current {
+  color: #4c301b;
+  pointer-events: none;
+  cursor: default;
+}     
+/* ========== Craft Manager ========== */
+.cmworkshops {
+  padding: 40px 40px 60px;
+  text-align: center;
+  background-color: #fffdf9;
+  
+}
+
+.cmworkshops h2 {
+  font-size: 36px;
+  margin: 0 0 20px;
+  color: #3e2c18;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.workshops-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.workshop-desc {
+  border: 1px solid #d8c7b5;
+  width: 220px; 
+  padding: 12px; 
+  border-radius: 10px;
+  background: #fffdf9;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+
+.workshop-desc:hover {
+  transform: translateY(-5px);
+}
+
+.workshop-img {
+
+  margin-bottom: 20px;
+}
+
+.workshop-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.workshop-desc h3 {
+  font-size: 18px;
+  color: #5a4634;
+  margin-bottom: 8px;
+}
+
+.workshop-desc p {
+  font-size: 14px;
+  color: #6d5c4b;
+  margin: 4px 0;
+}
+
+/* Flexbox used to align the two links side by side */
+#craft-dashboard-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 60px;
+  padding: 20px 0;
+
+}
+
+.craft-dashboard-link {
+  display: block;
+  width: 280px;
+  text-decoration: none;
+  background: #fffdf9;
+  border: 1px solid #d8c7b5;
+  border-radius: 12px;
+  padding: 18px 20px;
+  color: #4c301b;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.craft-dashboard-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+#craft-dashboard h2 {
+  color: #2e4528;    
+  font-size: 2rem;
+  margin-bottom: 10px;
+}  
+/* ========== add workshop ========== */
+#aw-main {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 0 16px;
+  font-family: Arial, sans-serif;
+}
+
+#aw-heading {
+  text-align: center;
+  margin-bottom: 32px;
+  color: #214d2e;
+  font-size: 18px;
+}
+
+#aw-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #f7f4ee;
+  padding: 20px;
+  border: 1px solid #dcd2bf;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  margin-top: 100px;
+}
+
+#aw-form label {
+  font-weight: bold;
+  color: #214d2e;
+  font-size: 18px;
+
+}
+
+#aw-form input,
+#aw-form textarea,
+#aw-form button {
+  padding: 10px;
+  border: 1px solid #dcd2bf;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#aw-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+#aw-submit-btn {
+  background: #214d2e;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#aw-submit-btn:hover {
+  background: #173c22;
+}
+
+#aw-desc-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #214d2e;
+  font-size: 16px;
+}
+
+#aw-panel {
+  background: #f7f4ee;
+  border: 1px solid #dcd2bf;
+  border-radius: 12px;
+  padding: 26px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  max-width: 800px;
+  margin: 20px auto;
+   margin-top: 200px;
+   margin-bottom: 100px;
+}
+
+#aw-submit-row {
+  display: flex;
+  justify-content: flex-end;
+}
+/* ========== manage staff ========== */
+#mscontent{
+  max-width:950px;
+  margin:0 auto;
+  padding-top:200px;   
+  padding-bottom:120px;
+}
+
+/* Forms */
+.ms-form {
+  background: #f7f4ee;
+  border: 1px solid #dcd2bf;
+  border-radius: 12px;
+  padding: 20px 26px;
+  margin: 22px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
 
 
 /* Titles */
@@ -978,19 +1220,9 @@ input[type="checkbox"] {
   background: #fff;
 }
 
-
-  #content {
-    padding-top: 200px;
-    padding-bottom: 120px;
-  }
-
 #Deletestaff{  /*عشان ابعد ال delete staff*/
     margin-top: 200px;
 }
-/* لحذف الدروب داون */
-.dropdown, .dropbtn, .droppages { display: none !important; }
-
-
     /*----------------------------------------------------------------------------------------------*/
     footer{ 
         display: flex;
