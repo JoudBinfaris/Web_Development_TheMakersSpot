@@ -859,7 +859,7 @@ margin-left: 1.3rem;
  * Manage Staff (#ms-)
  ***********************************************/
 
- #cm-PathBar {
+ /* #cm-PathBar {
   display: flex;
   margin: 0;
   padding-top: 0.5rem;
@@ -869,9 +869,9 @@ margin-left: 1.3rem;
   font-weight: bold;
   justify-content: center;
   background-image: url(images/light\ parchment.png);
-}
+} */
 
-.cm-path {
+/* .cm-path {
   padding-left: 0.3rem;
   padding-right: 0.3rem;
   color: #2e4528; 
@@ -884,7 +884,7 @@ margin-left: 1.3rem;
   color: #4c301b;
   pointer-events: none;
   cursor: default;
-}     
+}      */
 /* ========== Craft Manager ========== */
 .cmworkshops {
   padding: 40px 40px 60px;
