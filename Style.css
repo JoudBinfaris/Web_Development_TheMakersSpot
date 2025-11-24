@@ -35,13 +35,9 @@ header{
 }
 
   #TitleBar img {
-
-    
     width: 9.3rem;
     height: auto;
-   
     transform: translateY(2rem);
-
   }
 
   #TitleBar h1{
@@ -51,7 +47,8 @@ header{
     color:  #2e4528;}
 
   .brown{
-    color:#4c301b;}
+    color:#4c301b;
+  }
 
     #OptionBar{
         display: flex;
@@ -68,8 +65,6 @@ header{
     .option{
         padding-left: 1rem;
         padding-right: 1rem;
-
-
     }
 
     #OptionBar a{
@@ -109,10 +104,6 @@ header{
 
     } 
     /*----------------------------------------------------------------------------------------------*/
-
-
-
-
 
     .float{
         width: 14.47rem;
@@ -663,9 +654,7 @@ header{
         flex-grow: 0;
         flex-shrink: 0;
         overflow-wrap: break-word;
-        margin-bottom: 3rem;
-      
-        
+        margin-bottom: 3rem;     
     }
     .w2 h3{
         font-size: 1.3rem;
@@ -701,7 +690,10 @@ header{
   color:#2e4528;
 }
 
-
+/* ***********************************************************************************************
+   STAFF PROFILE PAGE STYLING
+   (For AboutUs - Staff Member Profile Pages)
+   *********************************************************************************************** */
 
 /* ========== staff profile table ========== */
 .staff-profile {
@@ -848,43 +840,13 @@ margin-left: 1.3rem;
   margin-top: 50px;
 }
 
-
-
-
-
-
 /***********************************************
  * Craft Manager Pages
  * Add Workshop (#aw-)
  * Manage Staff (#ms-)
  ***********************************************/
 
- /* #cm-PathBar {
-  display: flex;
-  margin: 0;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  z-index: 10;
-  position: relative;
-  font-weight: bold;
-  justify-content: center;
-  background-image: url(images/light\ parchment.png);
-} */
-
-/* .cm-path {
-  padding-left: 0.3rem;
-  padding-right: 0.3rem;
-  color: #2e4528; 
-  text-decoration: none;
-}
-.cm-path:hover {
-  text-decoration: underline;
-}
-.cm-current {
-  color: #4c301b;
-  pointer-events: none;
-  cursor: default;
-}      */
+     
 /* ========== Craft Manager ========== */
 .cmworkshops {
   padding: 40px 40px 60px;
@@ -975,10 +937,12 @@ margin-left: 1.3rem;
   box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
+#craft-dashboard {
+    text-align: center;
+}
 #craft-dashboard h2 {
   color: #2e4528;    
   font-size: 2rem;
-  margin-bottom: 10px;
 }  
 /* ========== add workshop ========== */
 #aw-main {
@@ -1251,6 +1215,11 @@ input[type="checkbox"] {
         margin-top: 0.25rem;
     }
     a{color:#2e4528;} /**
+    
+
+
+
+
     
 
 

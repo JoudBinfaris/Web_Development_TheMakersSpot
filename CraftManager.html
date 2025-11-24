@@ -1,106 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>The Makers Spot</title>
-<meta charset="utf-8">
-<style>
-    @import url(Style.css);
-</style>
+  <title>The Makers Spot</title>
+  <meta charset="utf-8">
+  <style>@import url(Style.css);</style>
 </head>
 <body>
-     <header>
-        
-      <div id="TitleBar">
-        <h1 id="TitleSubject">The Makers <span class=brown>Spot</span> <img id=logo src="images/tms.png" alt=""></h1>
-        </div>
+  <header>
+    <div id="TitleBar">
+      <h1 id="TitleSubject">The Makers <span class="brown">Spot</span> <img id="logo" src="images/tms.png" alt=""></h1>
+    </div>
+
     <nav>
-
-        <div id="OptionBar">
-              <a class="option" href=Home.html>Home</a>    <div class="flex-dropdown">
-    <button class="menu-btn">My Spot</button>
-    <div class="menu-content">
-        <a href="PreviousWorkshops.html">Previous Workshops</a>
-        <a href="WorkshopsRequest.html">Request Workshops</a>
+      <div id="OptionBar">
+        <a class="option" href="Home.html">Home</a>
+        <div class="flex-dropdown">
+          <button class="menu-btn">My Spot</button>
+          <div class="menu-content">
+            <a href="PreviousWorkshops.html">Previous Workshops</a>
+            <a href="WorkshopsRequest.html">Request Workshops</a>
+          </div>
         </div>
-    </div>      <a class="option" href=Workshops.html>Workshops</a>    <a class="option" href=AboutUs.html>About Us</a>    <a class="option" href="CraftManager.html">Craft Manager</a> 
-        </div>
+        <a class="option" href="Workshops.html">Workshops</a>
+        <a class="option" href="AboutUs.html">About Us</a>
+        <a class="option" href="CraftManager.html">Craft Manager</a>
+      </div>
 
-
-        <div id="PathBar">
-            <a class="path" href=Home.html>Home</a>  >   <a class="path" href=CraftManager.html>Craft Manager</a>
-
-        </div>
+      <div id="PathBar">
+        <a class="path" href="Home.html">Home</a> &gt;
+        <a class="path" href="CraftManager.html">Craft Manager</a>
+      </div>
     </nav>
+  </header>
 
+  <div id="content">
+    <section class="cmworkshops">
+      <h2>My Workshops</h2>
+      <div class="workshops-container">
 
-     </header>
+        <!-- Workshop 1 -->
+        <div class="workshop-desc">
+          <div class="workshop-img">
+            <img src="images/flower.png" alt="Flower Arrangement" width="200">
+          </div>
+          <h3>Flower Arrangement</h3>
+          <p>Description: Learn how to arrange flowers into stunning bouquets.</p>
+          <p>Price: 150SAR</p>
+        </div>
 
+        <!-- Workshop 2 -->
+        <div class="workshop-desc">
+          <div class="workshop-img">
+            <img src="images/pottery.png" alt="Pottery Workshop" width="200">
+          </div>
+          <h3>Pottery</h3>
+          <p>Description: Explore pottery techniques and create your own cups and vases.</p>
+          <p>Price: 220SAR</p>
+        </div>
 
+        <!-- Workshop 3 -->
+        <div class="workshop-desc">
+          <div class="workshop-img">
+            <img src="images/knitting.png" alt="Knitting Workshop" width="200">
+          </div>
+          <h3>Knitting</h3>
+          <p>Description: Learn knitting basics and make handmade cozy items.</p>
+          <p>Price: 120SAR</p>
+        </div>
 
+      </div> <!-- workshops-container -->
+    </section> <!-- cmworkshops -->
 
+    <main id="craft-dashboard">
+      <h2>Craft Manager Dashboard</h2>
+      <p>Select one of the options below to manage your workshops or staff members.</p>
 
+      <section id="craft-dashboard-links">
+        <a href="AddWorkshop.html" class="craft-dashboard-link">
+          <h3>Add a New Workshop</h3>
+          <p>Create a new workshop with its details.</p>
+        </a>
 
-     <div id="content">
+        <a href="ManageStaff.html" class="craft-dashboard-link">
+          <h3>Manage Staff Members</h3>
+          <p>View, delete, or add staff members.</p>
+        </a>
+      </section>
+    </main>
+  </div>
 
- <section class="cmworkshops">
-  <h2>My Workshops</h2>
-  <div class="workshops-container">
-    
-    <!-- Workshop 1 -->
-    <div class="workshop-desc">
-      <div class="workshop-img">
-        <img src="images/flower.png" alt="Flower Arrangement" width="200">
-      </div>
-      <h3>Flower Arrangement</h3>
-      <p>Description: Learn how to arrange flowers into stunning bouquets.</p>
-      <p>Price: 150SAR</p>
-    </div>
-
-    <!-- Workshop 2 -->
-    <div class="workshop-desc">
-      <div class="workshop-img">
-        <img src="images/pottery.png" alt="Pottery Workshop" width="200">
-      </div>
-      <h3>Pottery</h3>
-      <p>Description: Explore pottery techniques and create your own cups and vases.</p>
-      <p>Price: 220SAR</p>
-    </div> 
-
-    <!-- Workshop 3 -->
-    <div class="workshop-desc">
-      <div class="workshop-img">
-        <img src="images/knitting.png" alt="Knitting Workshop" width="200">
-      </div>
-      <h3>Knitting</h3>
-      <p>Description: Learn knitting basics and make handmade cozy items.</p>
-      <p>Price: 120SAR</p>
-    </div>
-
-
-<main id="craft-dashboard">
-  <h2>Craft Manager Dashboard</h2>
-  <p>Select one of the options below to manage your workshops or staff members.</p>
-
-  <!-- Flexbox section with links -->
-  <section id="craft-dashboard-links">
-    <a href="AddWorkshop.html" class="craft-dashboard-link">
-      <h3>Add a New Workshop</h3>
-      <p>Create a new workshop with its details.</p>
-    </a>
-
-    <a href="ManageStaff.html" class="craft-dashboard-link">
-      <h3>Manage Staff Members</h3>
-      <p>View, delete, or add staff members.</p>
-    </a>
-  </section>
-</main>
-    
-     </div>
-     <footer>
-        <a href="mailto:info@TheMakersSpot.com">info@TheMakersSpot.com</a>
-        <p>All Rights Reserved To JAN.CO &copy;</p>
-      </footer>
-
-
+  <footer>
+    <a href="mailto:info@TheMakersSpot.com">info@TheMakersSpot.com</a>
+    <p>All Rights Reserved To JAN.CO &copy;</p>
+  </footer>
 </body>
 </html>
