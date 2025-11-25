@@ -31,29 +31,35 @@
 
      </header>
 <div id="content">
-<main id="aw-main">
+    <main id="aw-main">
       <div id="aw-panel">
         <h2 id="aw-heading">Add a New Workshop</h2>
 
         <form id="aw-form" action="#" method="post">
           <div class="aw-field">
             <label for="wname">Name <span class="star">*</span></label>
-            <input id="wname" type="text" placeholder="Input field" required>
+            <input id="wname" type="text" placeholder="Input field" >
           </div>
 
           <div class="aw-field">
-            <label for="wprice">Price *</label>
-            <input id="wprice" type="text" placeholder="Enter price in SAR" required>
+            <label for="wprice">Price <span class="star">*</span></label>
+            <input id="wprice" type="text" placeholder="Enter price in SAR" >
           </div>
 
           <div class="aw-field">
             <label for="wphoto">Photo <span class="star">*</span></label>
-            <input id="wphoto" type="file" accept="image/*" required>
+         
+            <select id="wphoto" required>
+              <option value="">Select a photo</option>
+              <option value="images/flower.png">Flower</option>
+              <option value="images/pottery.png">Pottery</option>
+              <option value="images/knitting.png">Knitting</option>
+            </select>
           </div>
 
           <div class="aw-field">
             <p id="aw-desc-label">Workshop Description <span class="star">*</span></p>
-            <textarea id="wdesc" placeholder="Write Your Message Here..." required></textarea>
+            <textarea id="wdesc" placeholder="Write your description here..." ></textarea>
           </div>
 
           <div id="aw-submit-row">
@@ -62,13 +68,13 @@
         </form>
       </div>
     </main>
-</div>
+  </div>
 
      <footer>
         <a href="mailto:info@TheMakersSpot.com">info@TheMakersSpot.com</a>
         <p>All Rights Reserved To JAN.CO &copy;</p>
       </footer>
 
-
+<script src="Script.js"></script>
 </body>
 </html>

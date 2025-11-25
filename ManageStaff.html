@@ -32,28 +32,11 @@
 
      </header>
 <div id="mscontent">
-<!-- ===== Section 1: Delete Staff ===== -->
-    <form  id="Deletestaff" class="ms-form" method="post">
+
+    <!-- ===== Section 1: Delete Staff ===== -->
+    <form id="Deletestaff" class="ms-form" method="post">
       <h3 class="ms-subtitle">Manage Staff Members</h3>
-
-      <div class="ms-staff-list">
-        <label class="ms-staff-item">
-          <img src="images/StaffMembericon.png" alt="Employee">
-          <span>Employee Name</span>
-          <input type="checkbox" name="delete[]" value="emp1">
-        </label>
-
-        <label class="ms-staff-item">
-          <img src="images/StaffMembericon.png" alt="Employee">
-          <span>Employee Name</span>
-          <input type="checkbox" name="delete[]" value="emp2">
-        </label>
-
-        <label class="ms-staff-item">
-          <img src="images/StaffMembericon.png" alt="Employee">
-          <span>Employee Name</span>
-          <input type="checkbox" name="delete[]" value="emp3">
-        </label>
+      <div class="ms-staff-list" id="staffList">
       </div>
 
       <div class="ms-actions">
@@ -62,50 +45,57 @@
     </form>
 
     <!-- ===== Section 2: Add Staff ===== -->
-    <form  id="Addstaff" class="ms-form" method="post">
+    <form id="Addstaff" class="ms-form" method="post">
       <h3 class="ms-subtitle">Add New Staff Member</h3>
 
       <div class="ms-grid">
+
         <div class="ms-group">
           <label for="msName">Name <span class="ms-star">*</span></label>
-          <input id="msName" type="text" required>
+          <input id="msName" type="text" >
         </div>
 
         <div class="ms-group">
           <label for="msPhoto">Photo <span class="ms-star">*</span></label>
-          <input id="msPhoto" type="file" accept="image/*" required>
+        
+          <select id="msPhoto" >
+            <option value="">Select a photo</option>
+            <option value="images/StaffMembericon.png">Manager</option>
+            <option value="images/StaffMembericon.png">Instructor</option>
+            <option value="images/StaffMembericon.png">Assistant</option>
+          </select>
         </div>
 
         <div class="ms-group">
           <label for="msEmail">Email <span class="ms-star">*</span></label>
-          <input id="msEmail" type="email" required>
+          <input id="msEmail" type="email" >
         </div>
 
         <div class="ms-group">
           <label for="msExpertise">Expertise <span class="ms-star">*</span></label>
-          <input id="msExpertise" type="text" required>
+          <input id="msExpertise" type="text" >
         </div>
 
         <div class="ms-group">
           <label for="msDob">Date of Birth <span class="ms-star">*</span></label>
-          <input id="msDob" type="date" required>
+          <input id="msDob" type="date" >
         </div>
 
         <div class="ms-group">
           <label for="msSkills">Skills <span class="ms-star">*</span></label>
-          <input id="msSkills" type="text" required>
+          <input id="msSkills" type="text" >
         </div>
 
         <div class="ms-group ms-full">
           <label for="msEducation">Education <span class="ms-star">*</span></label>
-          <input id="msEducation" type="text" required>
+          <input id="msEducation" type="text" >
         </div>
       </div>
 
       <div class="ms-actions ms-full">
         <button type="submit" class="ms-btn ms-primary">Add</button>
       </div>
-    </form>  
+    </form>
   </div>
 
      <footer>
@@ -113,6 +103,6 @@
         <p>All Rights Reserved To JAN.CO &copy;</p>
       </footer>
 
-
+<script src="Script.js"></script>
 </body>
 </html>
