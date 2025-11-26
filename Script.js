@@ -1,3 +1,21 @@
+function updateClock() {
+    var clock = document.getElementById("clock");
+    if (clock) {
+        var now = new Date();
+        
+        //  HH:MM
+        var time = now.getHours().toString().padStart(2, "0") + ":" +
+                   now.getMinutes().toString().padStart(2, "0");
+
+        clock.innerHTML = "Current Time: " + time;
+    }
+}
+
+// Update every minute 60,000ms is one minute
+setInterval(updateClock, 60000);
+
+// Update when the page loads
+updateClock();
 let dark = false;
 
 function applyTheme(theme) {
@@ -5,7 +23,7 @@ function applyTheme(theme) {
     var h1s   = document.getElementsByTagName("h1");
     var h2s   = document.getElementsByTagName("h2");
     var h3s   = document.getElementsByTagName("h3");
-    var h4s   = document.getElementsByTagName("h4"); // <-- FIXED NAME
+    var h4s   = document.getElementsByTagName("h4"); 
     var ps    = document.getElementsByTagName("p");
     var links = document.getElementsByTagName("a");
 
@@ -39,14 +57,14 @@ function applyTheme(theme) {
 }
 
 function switchTheme() {
-    // if we are in alt theme (dark==true) → go back to "default"
-    // if in default (dark==false) → go to "light"
+    // if we are in alt theme (dark==true) then go back to "default"
+    // if in default (dark==false) then go to "light"
     const newTheme = dark ? "default" : "light";
     localStorage.setItem("theme", newTheme);
     applyTheme(newTheme);
 }
 
-// Apply theme on page load (ONLY if last saved is "light")
+// Apply theme on page load (only if last saved is light)
 let savedTheme = localStorage.getItem("theme");
 if (savedTheme === "light") {
     applyTheme("light");
