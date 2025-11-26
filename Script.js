@@ -238,4 +238,127 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-}); 
+});
+
+
+//Alhanouf 
+document.addEventListener("DOMContentLoaded", () => {
+const page= window.location.pathname.split("/").pop();
+
+
+
+
+// WORKSHOP REQUEST PAGE
+
+if(page === "WorkshopsRequest.html")
+{ 
+document.querySelector(".form-han").addEventListener("submit", function(e) {
+        e.preventDefault();
+let workshop = document.getElementById("workshop2").value;
+       let fname = document.getElementById("name1").value.trim();
+       let lname = document.getElementById("name2").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let date = document.getElementById("date").value;
+        let comments = document.getElementById("comments").value.trim();
+      
+     const nameRegex = /^[A-Za-z]{2,} [A-Za-z]{2,}$/;
+
+        
+        if(!nameRegex.test(fname+" "+lname)) {
+            alert("Full name must contain first and last name only.");
+            return;
+        }
+if(comments.length <100) {
+            alert("Description must be at least 100 characters.");
+            return;
+        }
+let today = new Date();
+today.setDate(today.getDate() + 3);
+if (new Date(date) < today) {
+            alert("The workshop date must be at least 3 days from today.");
+            return;
+        }
+
+let stay=confirm("Request sent!\nOK = stay here\nCancel = go to dashboard");
+  if(!stay) {
+        window.location.href = "PreviousWorkshops.html";
+        return;
+        }
+
+     
+let container = document.querySelector(".savedrequests");
+let card = document.createElement("div");
+
+        card.classList.add("request-box");
+        card.innerHTML = `
+            <h3>New Request Added</h3>
+            <p><strong>Workshop:</strong> ${workshop}</p>
+            <p><strong>Customer:</strong> ${fname} ${lname}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Date:</strong> ${date}</p>
+            <p><strong>Description:</strong> ${comments}</p>
+            <hr>
+        `;
+
+   
+container.appendChild(card);
+document.querySelector(".form-han").reset();
+    });
+}
+  
+
+
+
+
+//WORKSHOPS PAGE SORTING 
+if(page==="Workshops.html" ) {
+
+const container = document.querySelector(".workshops");
+let workshops = Array.from(document.querySelectorAll(".w1"));
+function shuffle(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
+
+function render(list) {
+    container.innerHTML = "";
+    list.forEach(item => container.appendChild(item));
+}
+
+workshops=shuffle(workshops);
+render(workshops);
+  document.getElementById("sort").addEventListener("change", function () {
+    const value = this.value;
+    if(value==="low-high") {
+        workshops.sort((a, b) =>
+            parseInt(a.querySelector(".ws-price").textContent.replace("Price: ", "")) -
+            parseInt(b.querySelector(".ws-price").textContent.replace("Price: ", ""))
+        );
+    }
+else if(value==="high-low") {
+        workshops.sort((a, b) =>
+            parseInt(b.querySelector(".ws-price").textContent.replace("Price: ", "")) -
+            parseInt(a.querySelector(".ws-price").textContent.replace("Price: ", ""))
+        );
+    }
+else if(value==="a-z") {
+        workshops.sort((a, b) =>
+            a.querySelector(".ws-name").textContent.trim()
+            .localeCompare(b.querySelector(".ws-name").textContent.trim())
+        );
+    }
+else if(value==="z-a") {
+        workshops.sort((a, b) =>
+            b.querySelector(".ws-name").textContent.trim()
+            .localeCompare(a.querySelector(".ws-name").textContent.trim())
+        );
+    }
+ render(workshops);
+
+        
+});
+}
+});
