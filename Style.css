@@ -169,16 +169,16 @@ header {
 
 #content {
   margin-top: 20rem;
-  margin-bottom: 4.5rem;
+  margin-bottom: 5rem;
 
 }
 
 /*----------------------------------------------------------------------------------------------*/
-#themeBtn{
+#themeBtn {
 
   font-family: "Poppins", sans-serif;
   width: 10rem;
-  border-radius: 0.3rem;
+  border-radius: 10rem;
   font-size: 1.5rem;
   color: #faf6eb;
   margin-left: 3rem;
@@ -187,6 +187,22 @@ header {
   background-color: #2e4528;
 
 }
+
+#backToTop {
+  display:none;/*for when it first loads*/
+  position: fixed;
+  bottom: 10%;/*near bottom*/
+  left: 48%;/*center*/
+  background-color: #4c301b;
+  color: #faf6eb;
+  border: none;
+  border-radius: 3rem;
+  font-size: 0.8rem;
+  width: 4rem;
+  cursor: pointer;
+  z-index: 3000;
+}
+
 
 .float {
   width: 14.47rem;
@@ -1418,14 +1434,7 @@ footer * {
   margin-bottom: 0.3rem;
 }
 
-a,#clock {
+a,
+#clock {
   color: #2e4528;
 }
-
-
-    
-
-
-
-
-    

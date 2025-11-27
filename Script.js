@@ -1,3 +1,27 @@
+// Show/hide button when scrolling
+window.onscroll = function () {
+    var btn = document.getElementById("backToTop");
+    if (btn) {//if the btn exists
+        if (document.documentElement.scrollTop > 200 ||//number of pixels the content of <html> is scrolled is more than 200
+            document.body.scrollTop > 200) {//number of pixels the content of body is scrolled is more than 200   (added both rules because it depends on the browser)
+            btn.style.display = "block"; 
+        } else {
+            btn.style.display = "none";
+        }
+    }
+};
+
+//  When button is clicked  go up smoothly
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+
+//clock code below------------------------------------------------------------------
 function updateClock() {
     var clock = document.getElementById("clock");
     if (clock) {
@@ -18,6 +42,7 @@ setInterval(updateClock, 60000);
 updateClock();
 let dark = false;
 
+//switch theme code below------------------------------------------------------------------
 function applyTheme(theme) {
     // to override css rules 
     var h1s   = document.getElementsByTagName("h1");
@@ -70,11 +95,80 @@ if (savedTheme === "light") {
     applyTheme("light");
 }
 
+//join our team input check code below------------------------------------------------------------------
+const joinForm = document.getElementById("joinForm");
+
+if (joinForm) {
+    joinForm.addEventListener("submit", function (e) {
+        e.preventDefault(); // stop normal submit
+
+        // get values
+        var name       = document.getElementById("name").value.trim();
+        var photoInput = document.getElementById("photo");
+        var photoPath  = photoInput.value;
+        var email      = document.getElementById("email").value.trim();
+        var skills     = document.getElementById("skills").value.trim();
+        var dob        = document.getElementById("dob").value;
+        var education  = document.getElementById("education").value.trim();
+        var expertise  = document.getElementById("expertise").value.trim();
+
+        //  No empty fields except messsage since its optional
+        if (!name || !photoPath || !email || !skills || !dob || !education || !expertise) {
+            alert("Please fill all required fields (*) before submitting");
+            return;
+        }
+
+        // Name doesn’t start with a number
+        if (!isNaN(name.charAt(0))) {
+            alert("Name cannot start with a number");
+            return;
+        }
+
+        // checks by extention if it is a photo
+        var dotIndex = photoPath.lastIndexOf(".");
+        if (dotIndex == -1) {
+            alert("Please choose a valid image file:jpg, jpeg, png, gif, webp");
+            return;
+        }
+
+        var ext = photoPath.substring(dotIndex + 1).toLowerCase();
+        var allowedExt = ["jpg", "jpeg", "png", "gif", "webp"];
+
+        var isImage = false;
+        for (var i = 0; i < allowedExt.length; i++) {
+            if (ext == allowedExt[i]) {
+                isImage = true;
+                break;
+            }
+        }
+
+        if (!isImage) {
+            alert("Photo must be an image file jpg, jpeg, png, gif, webp.");
+            return;
+        }
+
+        // 4) DOB is not after 2008 (year <= 2008)
+        var year = parseInt(dob.substring(0, 4/*first four since format is YYYY*/), 10/*decimal*/);
+        if (year > 2008) {
+            alert("Date of birth must not be after 2008.");
+            return;
+        }
+
+        // If we reach here then all validation passed
+        alert("Thank you, " + name + "! Your application has been submitted.");
+
+        // clear the form
+        joinForm.reset();
+    });
+}
+
 
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    
 
   
 
