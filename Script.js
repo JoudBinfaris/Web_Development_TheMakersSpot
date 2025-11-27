@@ -96,7 +96,7 @@ if (savedTheme === "light") {
 }
 
 //join our team input check code below------------------------------------------------------------------
-const joinForm = document.getElementById("join");
+const joinForm = document.getElementById("join-2");
 
 if (joinForm) {
     joinForm.addEventListener("submit", function (e) {
