@@ -168,75 +168,110 @@ if (joinForm) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    // ==============================
+    //  ADD WORKSHOP PAGE 
+    // ==============================
+
+const addForm = document.getElementById("aw-form");
+
+if (addForm) {
+    addForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name  = document.getElementById("wname").value.trim();
+        const price = document.getElementById("wprice").value.trim();
+        const photoInput = document.getElementById("wphoto");
+        const desc  = document.getElementById("wdesc").value.trim();
     
 
-  
+        // Name
+        if (!name) {
+            alert("Please enter the workshop name.");
+            return;
+        }
 
-    const addForm = document.getElementById("aw-form");
+        if (!isNaN(name[0])) {
+            alert("The workshop name cannot start with a number.");
+            return;
+        }
 
-    if (addForm) {
-        addForm.addEventListener("submit", function (e) {
-            e.preventDefault();
+        // Price
+        if (!price) {
+            alert("Please enter the workshop price.");
+            return;
+        }
 
-            const name = document.getElementById("wname").value.trim();
-            const price = document.getElementById("wprice").value.trim();
-            const photo = document.getElementById("wphoto").value.trim();
-            const desc = document.getElementById("wdesc").value.trim();
+        if (isNaN(price)) {
+            alert("Price must be a number.");
+            return;
+        }
 
-            // --- Validation with specific alerts ---
-            if (!name) {
-                alert("Please enter the workshop name.");
-                return;
+        // Photo must be chosen
+        if (!photoInput.files || photoInput.files.length === 0) {
+            alert("Please select a workshop photo.");
+            return;
+        }
+
+        const file = photoInput.files[0];
+        const fileName = file.name;
+
+        // Check extension 
+        const dotIndex = fileName.lastIndexOf(".");
+        if (dotIndex === -1) {
+            alert("Please choose a valid image file: jpg, jpeg, png, gif, webp.");
+            return;
+        }
+
+        const ext = fileName.substring(dotIndex + 1).toLowerCase();
+        const allowedExt = ["jpg", "jpeg", "png", "gif", "webp"];
+
+        let isImage = false;
+        for (let i = 0; i < allowedExt.length; i++) {
+            if (ext === allowedExt[i]) {
+                isImage = true;
+                break;
             }
+        }
 
-            if (!isNaN(name[0])) {
-                alert("The workshop name cannot start with a number.");
-                return;
-            }
+        if (!isImage) {
+            alert("Photo must be an image file: jpg, jpeg, png, gif, webp.");
+            return;
+        }
 
-            if (!price) {
-                alert("Please enter the workshop price.");
-                return;
-            }
+        // Description
+        if (!desc) {
+            alert("Please enter the workshop description.");
+            return;
+        }
 
-            if (isNaN(price)) {
-                alert("Price must be a number.");
-                return;
-            }
+       
+        const reader = new FileReader();
 
-            if (!photo) {
-                alert("Please select a workshop photo.");
-                return;
-            }
-
-            if (!desc) {
-                alert("Please enter the workshop description.");
-                return;
-            }
+        reader.onload = function () {
+            const imageDataUrl = reader.result; 
 
             // --- Load existing workshops from localStorage ---
             let workshops = JSON.parse(localStorage.getItem("workshops")) || [];
-
             // --- Create new workshop object ---
             const newWorkshop = {
-                name: name,
-                price: price,
-                photo: photo,
+                name:        name,
+                price:       price,
+                photo:       imageDataUrl,  
                 description: desc
             };
-
             // --- Save back to localStorage (array of objects) ---
             workshops.push(newWorkshop);
             localStorage.setItem("workshops", JSON.stringify(workshops));
 
-            // --- Success alert with the name of the new service ---
             alert(`Workshop "${name}" has been added successfully!`);
-
             // --- Clear the form ---
             addForm.reset();
-        });
-    }
+        };
 
+        
+        reader.readAsDataURL(file);
+    });
+}
     // ====================================
     //  CRAFT MANAGER DASHBOARD PAGE
     // ====================================
