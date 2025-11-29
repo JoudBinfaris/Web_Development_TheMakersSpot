@@ -51,11 +51,13 @@ function applyTheme(theme) {
     var h4s   = document.getElementsByTagName("h4"); 
     var ps    = document.getElementsByTagName("p");
     var links = document.getElementsByTagName("a");
+    var mySpot = document.getElementsByClassName("menu-btn");
 
     if (theme === "light") {
         // ALT THEME
         document.body.style.backgroundColor = "#fff9ea";
         document.body.style.color = "#000000";
+        
 
         for (var i = 0; i < h1s.length; i++) h1s[i].style.color = "#000000";
         for (var i = 0; i < h2s.length; i++) h2s[i].style.color = "#000000";
@@ -63,12 +65,14 @@ function applyTheme(theme) {
         for (var i = 0; i < h4s.length; i++) h4s[i].style.color = "#000000";
         for (var i = 0; i < ps.length;  i++) ps[i].style.color  = "#000000";
         for (var i = 0; i < links.length; i++) links[i].style.color = "#000000";
+        for (var i = 0; i < mySpot.length; i++) mySpot[i].style.color = "#000000";
 
         dark = true;
     } else {
         // BACK TO ORIGINAL CSS
         document.body.style.backgroundColor = "";
         document.body.style.color = "";
+       
 
         for (var i = 0; i < h1s.length; i++) h1s[i].style.color = "";
         for (var i = 0; i < h2s.length; i++) h2s[i].style.color = "";
@@ -76,6 +80,7 @@ function applyTheme(theme) {
         for (var i = 0; i < h4s.length; i++) h4s[i].style.color = "";
         for (var i = 0; i < ps.length;  i++) ps[i].style.color  = "";
         for (var i = 0; i < links.length; i++) links[i].style.color = "";
+        for (var i = 0; i < mySpot.length; i++) mySpot[i].style.color = "";
 
         dark = false;
     }
