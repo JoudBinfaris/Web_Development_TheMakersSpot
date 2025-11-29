@@ -177,11 +177,11 @@ header {
 #themeBtn {
 
   font-family: "Poppins", sans-serif;
-  width: 10rem;
+  width: 15rem;
   border-radius: 10rem;
   font-size: 1.5rem;
   color: #faf6eb;
-  margin-left: 3rem;
+  margin-left: 2rem;
   margin-bottom: 1rem;
   cursor: pointer;
   background-color: #2e4528;
@@ -189,10 +189,13 @@ header {
 }
 
 #backToTop {
-  display:none;/*for when it first loads*/
+  display: none;
+  /*for when it first loads*/
   position: fixed;
-  bottom: 10%;/*near bottom*/
-  left: 48%;/*center*/
+  bottom: 10%;
+  /*near bottom*/
+  left: 48%;
+  /*center*/
   background-color: #4c301b;
   color: #faf6eb;
   border: none;
@@ -439,7 +442,7 @@ img {
 
 
 /* Small screens-phones */
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 700px) {
 
 
 
@@ -465,6 +468,26 @@ img {
   .menu-btn {
     font-size: 0.9rem;
   }
+
+  #themeBtn {
+
+    font-family: "Poppins", sans-serif;
+    width: 10rem;
+    border-radius: 5rem;
+    font-size: 0.8rem;
+    color: #faf6eb;
+    margin-left: 8rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    background-color: #2e4528;
+
+  }
+
+  .flex-dropdown {
+    transform: translateY(-0.25rem);
+    margin: 0 0.25rem;
+  }
+
 
   #content {
 
@@ -499,10 +522,13 @@ img {
   }
 
   #backToTop {
- 
-    bottom: 11%;/*near bottom*/
-    left: 43%;/*center*/
- 
+
+    bottom: 15%;
+    /*near bottom*/
+    left: 80%;
+    width: 3rem;
+    /*center*/
+
   }
 
   .sectionHeader {
@@ -560,10 +586,6 @@ img {
     padding: 0.4rem 0.75rem;
   }
 
-
-  .flex-dropdown {
-    margin: 0 0.25rem;
-  }
 
   footer {
     padding: 0.3rem 0;
