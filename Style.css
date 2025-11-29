@@ -498,6 +498,13 @@ img {
     max-width: 14rem;
   }
 
+  #backToTop {
+ 
+    bottom: 11%;/*near bottom*/
+    left: 43%;/*center*/
+ 
+  }
+
   .sectionHeader {
     font-size: 2rem;
     margin-left: 1rem;
